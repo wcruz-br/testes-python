@@ -1,0 +1,7 @@
+requests
+beautifulsoup4
+pycrypto
+cryptography
+python-dateutil
+urllib3
+pyyaml

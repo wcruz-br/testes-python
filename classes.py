@@ -60,3 +60,26 @@ cat2 = Cat()
 print("Número total de animais:", Animal.total_animals)
 print("Número total de cães:", Dog.num_animals)
 print("Número total de gatos:", Cat.num_animals)
+
+print("---------------------------------------------------------------")
+
+class Record:
+    """Hold a record of data."""
+
+john = {
+    "name": "John Doe",
+    "position": "Python Developer",
+    "department": "Engineering",
+    "salary": 80000,
+    "hire_date": "2020-01-01",
+    "is_manager": False,
+}
+
+john_record = Record()
+
+for field, value in john.items():
+    setattr(john_record, field, value)
+
+john_record.name
+
+john_record.department

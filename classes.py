@@ -1,19 +1,23 @@
 import math
-def circle_area(radius):
-    return math.pi * pow(radius, 2)
 
-circle = {
-    "radius": 3,
-    "color": "blue"
-}
+class Person:
+    def __init__(self, first, last):
+        self.first = first
+        self.last = last
 
-# print(circle_area(circle["radius"]))
+    def full_name(self):
+        return self.first + " " + self.last
 
-person = {
-    "first": "Willian",
-    "last": "Cruz",
-}
+person = Person("Willian", "Cruz")
+print(person.full_name())
 
-print(person["first"] + " " + person["last"])
+class Circle:
+    def __init__(self, radius, color):
+        self.radius = radius
+        self.color = color
+    def area(self):
+        return math.pi * pow(self.radius, 2)
 
+circle = Circle(3, "blue")
+print(circle.area())
 

@@ -11,6 +11,8 @@ class Person:
 person = Person("Willian", "Cruz")
 print(person.full_name())
 
+print("---------------------------------------------------------------")
+
 class Circle:
     def __init__(self, radius, color):
         self.radius = radius
@@ -21,3 +23,40 @@ class Circle:
 circle = Circle(3, "blue")
 print(circle.area())
 
+print("---------------------------------------------------------------")
+
+class ObjectCounter:
+    num_instances = 0
+    def __init__(self):
+        type(self).num_instances += 1
+
+ObjectCounter()
+ObjectCounter()
+ObjectCounter()
+counter = ObjectCounter()
+print(counter.num_instances)
+
+print("---------------------------------------------------------------")
+
+class Animal:
+    num_animals = 0
+    total_animals = 0
+
+    def __init__(self):
+        type(self).num_animals += 1
+        Animal.total_animals += 1
+
+class Dog(Animal):
+    pass
+
+class Cat(Animal):
+    pass
+
+# Criando instâncias
+dog1 = Dog()
+cat1 = Cat()
+cat2 = Cat()
+
+print("Número total de animais:", Animal.total_animals)
+print("Número total de cães:", Dog.num_animals)
+print("Número total de gatos:", Cat.num_animals)

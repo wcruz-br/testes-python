@@ -5,3 +5,4 @@ cryptography
 python-dateutil
 urllib3
 pyyaml
+speedtest-cli

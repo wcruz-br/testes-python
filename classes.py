@@ -21,7 +21,7 @@ class Circle:
         return math.pi * pow(self.radius, 2)
 
 circle = Circle(3, "blue")
-print(circle.area())
+print(f"Área do círculo {circle.color}: {circle.area()}")
 
 print("---------------------------------------------------------------")
 
